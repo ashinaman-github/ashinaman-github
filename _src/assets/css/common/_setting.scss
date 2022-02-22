@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+$BREAK-SP: 768;
+$BREAK-PC: $BREAK-SP + 1;
+$PC: 1280;
+$OVER: 1360; // 1280 + 40 + 40
+$CANVAS: (
+  sp: 375,
+  pc: 1280
+);
+
+@mixin pc() {
+  @media screen and (min-width: $BREAK-PC + px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: $BREAK-SP + px) {
+    @content;
+  }
+}
+
+@mixin over() {
+  @media screen and (min-width: $OVER + px) {
+    @content;
+  }
+}
+
+@mixin mq-max($num) {
+  @media screen and (max-width: $num + px){
+    @content;
+  }
+}
+
+@mixin mq-min($num) {
+  @media screen and (min-width: $num + px){
+    @content;
+  }
+}
+
+@mixin mq-min-h($num) {
+  @media screen and (min-height: $num + px){
+    @content;
+  }
+}
+
+@mixin mq-range($min,$max) {
+  @media screen and (min-width: $min + px) and (max-width: $max + px){
+    @content;
+  }
+}
+
+@mixin fr($size, $line, $letterspacing:null) {
+  font-size: $size + px;
+  font-size: ($size / 10) * 1rem;
+  line-height: ($line / $size) + em;
+  @if $letterspacing != null {
+    letter-spacing: ($letterspacing/1000) + em;
+  }
+}
+
+@mixin fv($size, $line, $letterspacing: null, $base: sp) {
+  font-size: $size / map-get($CANVAS, $base) * 100vw;
+  line-height: ($line / $size) + em;
+  @if $letterspacing != null {
+    letter-spacing: ($letterspacing/1000) + em;
+  }
+}
+
+@mixin fv2($size, $line, $letterspacing: null, $base: 0) {
+  font-size: $size / $base * 100vw;
+  line-height: ($line / $size) + em;
+  @if $letterspacing != null {
+    letter-spacing: ($letterspacing/1000) + em;
+  }
+}
+
+@function p($targetsize, $base) {
+  @return percentage($targetsize / $base);
+}
+
+@function pf($targetsize, $base) {
+  @return floor(percentage($targetsize / $base));
+}
+
+@function v($size, $base: sp){
+  @return $size / map-get($CANVAS, $base) * 100vw;
+}
+
+@function v2($size, $base){
+  @return $size / $base * 100vw;
+}
+
+@mixin ie() {
+  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    @content;
+  }
+}

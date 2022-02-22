@@ -1,0 +1,10 @@
+# Browsers this project supports
+# cf.) https://github.com/browserslist/browserslist#config-file https://browserl.ist/
+
+last 2 Chrome versions
+Edge 18
+IE 11
+last 2 Firefox versions
+Safari >= 13
+iOS >= 12.4
+last 2 ChromeAndroid versions

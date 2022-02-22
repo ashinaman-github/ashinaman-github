@@ -1,0 +1,48 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "autoprefixer": "^9.8.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.26.7",
+    "cpx": "^1.5.0",
+    "cross-conf-env": "^1.1.2",
+    "ejs-cli": "^2.2.0",
+    "node-cmd": "^3.0.0",
+    "node-sass": "^4.14.1",
+    "node-sass-import": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "config": {
+    "entry": "_src",
+    "out": "dist",
+    "inc": "_inc"
+  },
+  "scripts": {
+    "test": "cross-conf-env echo \"Error: no test specified\" && exit 1",
+    "start": "cross-conf-env npm-run-all -p \"html -- /**/*.ejs\" \"css -- -o '$npm_package_config_out'\" \"autoprefixer\" \"webpack -- -w\" \"copy -w\" \"serve\"",
+    "build": "cross-conf-env npm-run-all -s \"clean\" \"html -- /**/*.ejs\" \"css -- -x --output-style=compressed -o '$npm_package_config_out'\" \"autoprefixer\" \"copy\" \"webpack -- --mode production\"",
+    "html": "cross-conf-env ejs-cli -b $npm_package_config_entry/ -o $npm_package_config_out/ -e $npm_package_config_entry/$npm_package_config_inc/",
+    "css": "cross-conf-env node-sass $npm_package_config_entry --importer node_modules/node-sass-import",
+    "copy": "cross-conf-env cpx \"$npm_package_config_entry/**/*.{png,jpg,gif,ico,mp4,mov,svg,otf,pdf,php,json}\" $npm_package_config_out/",
+    "autoprefixer": "cross-conf-env postcss -u autoprefixer -r $npm_package_config_out/**/*.css",
+    "serve": "cross-conf-env browser-sync start --config bs-config.js",
+    "webpack": "webpack",
+    "clean": "cross-conf-env rimraf $npm_package_config_out"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
