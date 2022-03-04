@@ -2,12 +2,15 @@
 
 $BREAK-SP: 768;
 $BREAK-PC: $BREAK-SP + 1;
-$PC: 1280;
-$OVER: 1360; // 1280 + 40 + 40
+$SP: 335;
+$PC: 1200;
+$OVER: 1280; // 1200 + 40 + 40
 $CANVAS: (
   sp: 375,
   pc: 1280
 );
+
+$FONT-MYRIAD: myriad-pro, sans-serif;
 
 @mixin pc() {
   @media screen and (min-width: $BREAK-PC + px) {
@@ -21,7 +24,7 @@ $CANVAS: (
   }
 }
 
-@mixin over() {
+@mixin ov() {
   @media screen and (min-width: $OVER + px) {
     @content;
   }
@@ -68,6 +71,14 @@ $CANVAS: (
   }
 }
 
+@mixin fvp($size, $line, $letterspacing: null, $base: pc) {
+  font-size: $size / map-get($CANVAS, $base) * 100vw;
+  line-height: ($line / $size) + em;
+  @if $letterspacing != null {
+    letter-spacing: ($letterspacing/1000) + em;
+  }
+}
+
 @mixin fv2($size, $line, $letterspacing: null, $base: 0) {
   font-size: $size / $base * 100vw;
   line-height: ($line / $size) + em;
@@ -85,6 +96,10 @@ $CANVAS: (
 }
 
 @function v($size, $base: sp){
+  @return $size / map-get($CANVAS, $base) * 100vw;
+}
+
+@function vp($size, $base: pc){
   @return $size / map-get($CANVAS, $base) * 100vw;
 }
 

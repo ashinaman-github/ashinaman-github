@@ -32,7 +32,7 @@
   },
   "scripts": {
     "test": "cross-conf-env echo \"Error: no test specified\" && exit 1",
-    "start": "cross-conf-env npm-run-all -p \"html -- /**/*.ejs\" \"css -- -o '$npm_package_config_out'\" \"autoprefixer\" \"webpack -- -w\" \"copy -w\" \"serve\"",
+    "start": "cross-conf-env npm-run-all -p \"html -- /**/*.ejs\" \"css -- -w -o '$npm_package_config_out'\" \"autoprefixer\" \"webpack -- -w\" \"copy -w\" \"serve\"",
     "build": "cross-conf-env npm-run-all -s \"clean\" \"html -- /**/*.ejs\" \"css -- -x --output-style=compressed -o '$npm_package_config_out'\" \"autoprefixer\" \"copy\" \"webpack -- --mode production\"",
     "html": "cross-conf-env ejs-cli -b $npm_package_config_entry/ -o $npm_package_config_out/ -e $npm_package_config_entry/$npm_package_config_inc/",
     "css": "cross-conf-env node-sass $npm_package_config_entry --importer node_modules/node-sass-import",

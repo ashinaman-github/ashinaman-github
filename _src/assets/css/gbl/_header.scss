@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.gbl-header {
+  display: inline-block;
+  position: fixed;
+  top: v(31);
+  left: v(20);
+  line-height: 0;
+  z-index: 3;
+  @include pc {
+    top: v(52, pc);
+    left: v(120, pc)
+  }
+  @include ov {
+    top: 52px;
+    left: 120px;
+  }
+  &_logo {
+    width: v(222);
+    display: block;
+    font-size: 0;
+    @include pc {
+      width: v(287, pc);
+    }
+    @include ov {
+      width: 287px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

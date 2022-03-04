@@ -1,0 +1,641 @@
+@charset "UTF-8";
+
+.pg-top_heading {
+  &_inner {
+    display: flex;
+    align-items: center;
+  }
+  &_title {
+    display: inline-block;
+    font-family: $FONT-MYRIAD;
+    @include fv(48, 48);
+    position: relative;
+    @include pc {
+      @include fvp(90, 90);
+    }
+    @include ov {
+      @include fr(90, 90);
+    }
+    b {
+      margin-right: v(15);
+      font-weight: bold;
+      @include pc {
+        margin-right: vp(15);
+      }
+      @include ov {
+        margin-right: 15px;
+      }
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: v(3);
+      position: absolute;
+      left: 0px;
+      bottom: v(3);
+      background: #333;
+      @include pc {
+        height: vp(3);
+        bottom: vp(10);
+      }
+      @include ov {
+        height: 3px;
+        bottom: 10px;
+      }
+    }
+  }
+}
+
+
+.pg-top_mv {
+  height: v(450);
+  background: url(/assets/img/top/mv.jpg) center center / cover no-repeat;
+  @include pc {
+    height: vp(720);
+    background: url(/assets/img/top/mv-pc.jpg) center center / cover no-repeat;
+  }
+  @include ov {
+    height: 720px;
+  }
+  &_inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include pc {
+      align-items: flex-start;
+    }
+  }
+  &_title {
+    width: v(328);
+    margin: 0px auto;
+    position: relative;
+    @include pc {
+      width: vp(622);
+      margin: 0px;
+    }
+    @include ov {
+      width: 622px;
+    }
+    &_main {
+      margin-top: v(-30);
+      line-height: 0;
+      @include pc {
+        margin-top: vp(290);
+      }
+      @include ov {
+        margin-top: 290px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &_jp {
+      width: v(154.5);
+      position: absolute;
+      right: 0px;
+      bottom: v(-30);
+      @include pc {
+        width: vp(286);
+        bottom: 0px;
+        right: vp(100);
+      }
+      @include ov {
+        width: 286px;
+        right: 100px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.pg-top_feature {
+  padding-top: v(42);
+  @include pc {
+    padding-top: vp(123);
+  }
+  @include ov {
+    padding-top: 123px;
+  }
+  &_inner {
+    @include pc {
+      padding-left: vp(144);
+    }
+    @include ov {
+      padding-left: 144px;
+    }
+  }
+  &_header {
+    span {
+      margin-top: v(3);
+      @include fv(28, 42, 4);
+      font-weight: 700;
+      display: inline-block;
+      position: relative;
+      border-bottom: v(3) solid #333;
+      @include pc {
+        margin-top: vp(3);
+        @include fvp(54, 81, 4);
+        border-bottom: vp(3) solid #333;
+      }
+      @include ov {
+        margin-top: 3px;
+        @include fr(54, 81, 4);
+        border-bottom: 3px solid #333;
+      }
+    }
+  }
+  &_body {
+    margin-top: v(42);
+    @include pc {
+      margin-top: vp(62);
+    }
+    @include ov {
+      margin-top: 62px;
+    }
+    &_read {
+      p {
+        margin-top: v(30);
+        @include fv(17, 32, 4);
+        font-weight: 700;
+        @include pc {
+          margin-top: vp(30);
+          @include fvp(31, 59, 4);
+        }
+        @include ov {
+          margin-top: 30px;
+          @include fr(31, 59, 4);
+        }
+        &:first-child {
+          margin-top: 0px;
+        }
+      }
+    }
+    &_link {
+      width: 100%;
+      height: v(72);
+      margin-top: v(42);
+      display: flex;
+      align-items: center;
+      border: v(1) solid #333;
+      position: relative;
+      @include pc {
+        width: vp(432);
+        height: vp(116);
+        margin-top: vp(73);
+        border-width: vp(1);
+      }
+      @include ov {
+        width: 432px;
+        height: 116px;
+        margin-top: 73px;
+        border-width: 1px;
+      }
+      img {
+        width: v(168);
+        margin: 0px auto;
+        @include pc {
+          width: vp(343);
+          margin: 0px;
+        }
+        @include ov {
+          width: 343px;
+        }
+      }
+      i {
+        width: v(48);
+        height: v(48);
+        position: absolute;
+        top: 50%;
+        right: v(16);
+        margin-top: v(-24);
+        background: #333;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include pc {
+          width: vp(48);
+          height: vp(48);
+          margin-top: vp(-24);
+          right: vp(34);
+        }
+        @include ov {
+          width: 48px;
+          height: 48px;
+          margin-top: -24px;
+          right: 34px;
+        }
+        svg {
+          width: v(14);
+          height: auto;
+          @include pc {
+            width: vp(14);
+          }
+          @include ov {
+            width: 14px;
+          }
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pg-top_story {
+  margin-top: v(52);
+  @include pc {
+    margin-top: vp(140);
+  }
+  @include ov {
+    margin-top: 140px;
+  }
+  &_worksMain {
+    margin-top: v(21);
+    @include pc {
+      margin-top: vp(88);
+    }
+    @include ov {
+      margin-top: 88px;
+    }
+    .pg-top_story_works {
+      @include pc {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .pg-top_story_works_list {
+      margin-top: v(28);
+      &:first-child {
+        margin-top: 0px;
+      }
+      @include pc {
+        width: vp(560);
+        margin: 0px;
+      }
+      @include ov {
+        width: 560px;
+      }
+    }
+  }
+  &_worksOther {
+    margin-top: v(28);
+    @include pc {
+      margin-top: vp(58);
+    }
+    @include ov {
+      margin-top: 58px;
+    }
+    &_inner {
+      @include sp {
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+    .pg-top_story_works {
+      @include sp {
+        padding-bottom: v(10);
+        display: flex;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          height: 10px;
+        }
+        &::-webkit-scrollbar-track {
+          background: rgba(0,0,0,0);
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #333;
+          border-radius: 5px;
+        }
+      }
+      @include pc {
+        margin-top: vp(-58);
+        display: flex;
+        flex-wrap: wrap;
+      }
+      @include ov {
+        margin-top: -58px;
+      }
+    }
+    .pg-top_story_works_list {
+      @include sp {
+        margin-left: v(20);
+        &:last-child {
+          margin-right: v(20);
+        }
+      }
+      @include pc {
+        margin: vp(58) vp(45) 0px 0px;
+        &:nth-child(3n) {
+          margin-right: 0px;
+        }
+      }
+      @include ov {
+        margin: 58px 45px 0px 0px;
+      }
+    }
+    .pg-top_story_works_picture {
+      width: v(264);
+      @include pc {
+        width: vp(370);
+      }
+      @include ov {
+        width: 370px;
+      }
+    }
+  }
+  &_works {
+    &_link {
+      display: block;
+    }
+    &_picture {
+      img {
+        width: 100%;
+      }
+    }
+    &_client {
+      margin-top: v(12);
+      @include fv(12, 18, 4);
+      @include pc {
+        margin-top: vp(17);
+        @include fvp(14, 21, 4);
+      }
+      @include ov {
+        margin-top: 17px;
+        @include fr(14, 21, 4);
+      }
+    }
+    &_name {
+      margin-top: v(3);
+      @include fv(15, 22, 4);
+      font-weight: 700;
+      @include pc {
+        margin-top: vp(4);
+        @include fvp(20, 36, 4);
+      }
+      @include ov {
+        margin-top: 4px;
+        @include fr(20, 36, 4);
+      }
+      .pg-top_story_worksMain & {
+        @include fv(17, 25, 4);
+        @include pc {
+          @include fvp(25, 45, 4);
+        }
+        @include ov {
+          @include fr(25, 45, 4);
+        }
+      }
+    }
+  }
+  &_more {
+    margin-top: v(42);
+    @include pc {
+      margin-top: vp(74);
+    }
+    @include ov {
+      margin-top: 74px;
+    }
+    a {
+      width: v(262);
+      height: v(54);
+      margin: 0px auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: #fff;
+      border-radius: v(33);
+      @include pc {
+        width: vp(262);
+        height: vp(68);
+        border-radius: vp(33);
+      }
+      @include ov {
+        width: 262px;
+        height: 68px;
+        border-radius: 33px;
+      }
+      p {
+        margin-left: v(74);
+        font-family: $FONT-MYRIAD;
+        @include fv(18, 27);
+        font-weight: 700;
+        color: #333;
+        @include pc {
+          margin-left: vp(62);
+          @include fvp(22, 22);
+        }
+        @include ov {
+          margin-left: 62px;
+          @include fr(22, 22);
+        }
+      }
+      i {
+        width: v(16);
+        height: v(16);
+        position: absolute;
+        right: v(19);
+        top: 50%;
+        margin-top: v(-8);
+        line-height: 0;
+        @include pc {
+          width: vp(16);
+          height: vp(16);
+          margin-top: vp(-8);
+          right: vp(26);
+        }
+        @include ov {
+          width: 16px;
+          height: 16px;
+          margin-top: -8px;
+          right: 26px;
+        }
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.pg-top_service {
+  margin-top: v(55);
+  @include pc {
+    margin-top: vp(148);
+  }
+  @include ov {
+    margin-top: 148px;
+  }
+  &_inner {
+    @include pc {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &_header {
+    @include pc {
+      width: vp(390);
+    }
+    @include ov {
+      width: 390px;
+    }
+    &_title {}
+    &_view {
+      margin-top: v(28);
+      @include pc {
+        margin-top: vp(48);
+        display: flex;
+        justify-content: flex-end;
+      }
+      @include ov {
+        margin-top: 48px;
+      }
+      &_link {
+        width: v(102);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include pc {
+          width: vp(150);
+        }
+        @include ov {
+          width: 150px;
+        }
+        i {
+          width: v(48);
+          height: v(48);
+          line-height: 0;
+          background: #333;
+          border-radius: 100%;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          @include pc {
+            width: vp(88);
+            height: vp(88);
+          }
+          @include ov {
+            width: 88px;
+            height: 88px;
+          }
+          svg {
+            width: v(14);
+            height: auto;
+            @include pc {
+              width: vp(24);
+            }
+            @include ov {
+              width: 24px;
+            }
+            path {
+              fill: #fff;
+            }
+          }
+        }
+        p {
+          @include fv(18, 27);
+          font-family: $FONT-MYRIAD;
+          font-weight: 700;
+          @include pc {
+            @include fvp(18, 27);
+          }
+          @include ov {
+            @include fr(18, 27);
+          }
+        }
+      }
+    }
+  }
+  &_body {
+    margin-top: v(42);
+    @include pc {
+      width: vp(672);
+      margin-top: 0px;
+    }
+    @include ov {
+      width: 672px;
+    }
+    &_box {
+      margin-top: v(28);
+      @include pc {
+        margin-top: vp(58);
+      }
+      @include ov {
+        margin-top: 58px;
+      }
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+    &_title {
+      @include pc {
+        display: flex;
+        align-items: center;
+      }
+      &_en {
+        @include fv(30, 30);
+        font-weight: 700;
+        font-family: $FONT-MYRIAD;
+        @include pc {
+          @include fvp(38, 38);
+        }
+        @include ov {
+          @include fr(38, 38);
+        }
+        span {
+          margin-right: v(10);
+          @include pc {
+            margin-right: vp(10);
+          }
+          @include ov {
+            margin-right: 10px;
+          }
+        }
+      }
+      &_jp {
+        margin-top: v(5);
+        @include fv(21, 31, 4);
+        font-weight: 700;
+        @include pc {
+          margin: 0px 0px 0px vp(32);
+          @include fvp(16, 28, 4);
+        }
+        @include ov {
+          margin-right: 32px;
+          @include fr(16, 28, 4);
+        }
+      }
+    }
+    &_detail {
+      margin-top: v(13);
+      padding-top: v(18);
+      border-top: v(1) solid #333;
+      @include pc {
+        margin-top: vp(8);
+        padding-top: vp(25);
+        border-top-width: vp(1);
+      }
+      @include ov {
+        margin-top: 8px;
+        padding-top: 25px;
+        border-top-width: 1px;
+      }
+      p {
+        @include fv(15, 27, 4);
+        @include pc {
+          @include fvp(16, 28, 4);
+        }
+        @include ov {
+          @include fr(16, 28, 4);
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+.guide {
+  &::before {
+    content: '';
+    width: v(335);
+    height: 100vh;
+    margin: 0px auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 0px 0px rgba(255, 0, 0, 0.2) inset, -1px 0px 0px rgba(255, 0, 0, 0.2) inset;
+    pointer-events: none;
+    z-index: 10000;
+    @include pc {
+      width: v(1200, pc);
+    }
+    @include ov {
+      width: 1200px;
+    }
+  }
+  &::after {
+    content: '';
+    width: 1px;
+    height: 100vh;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 10000;
+  }
+}
+
+html {
+  font-size: calc(100vw / 3.75);
+  background: #F2F2F2;
+  @include pc() {
+    font-size: 62.5%;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-feature-settings: "palt" 1;
+  -webkit-font-smoothing: antialiased;
+  @extend .guide;
+  color: #333;
+  @include fv(15, 27, 4);
+  a {
+    color: #333;
+  }
+  @include pc {
+    @include fr(16, 28, 4);
+  }
+}
+
+.myriad-italic-bold {
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.myriad-italic {
+  font-family: myriad-pro, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.none {
+  display: none;
+}
+
+.none_sp {
+  @include sp {
+    display: none;
+  }
+}
+
+.none_pc {
+  @include pc {
+    display: none;
+  }
+}
+
+.main {
+  // padding-bottom: v(82);
+  display: block;
+  position: relative;
+  z-index: 1;
+  // @include pc {
+  //   padding-bottom: vp(132);
+  // }
+  // @include ov {
+  //   padding-bottom: 132px;
+  // }
+}
+
+.inner {
+  width: v(335);
+  margin: 0px auto;
+  @include pc {
+    width: vp(1200);
+  }
+  @include ov {
+    width: 1200px;
+  }
+}
+

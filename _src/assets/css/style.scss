@@ -1,3 +1,11 @@
-@import "./common/_reset";
-@import "./common/_setting";
-@import "./common/_base";
+@import "./base/_reset";
+@import "./base/_setting";
+@import "./base/_base";
+
+@import "./gbl/_header";
+@import "./gbl/_nav";
+@import "./gbl/_footer";
+@import "./gbl/_talk";
+
+@import "./pg/_top";
+@import "./pg/_about";

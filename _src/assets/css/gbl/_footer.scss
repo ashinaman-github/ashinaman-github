@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+.gbl-footer {
+  margin-top: v(82);
+  padding: v(54) 0px v(32) 0px;
+  background: #333;
+  color: #fff;
+  @include pc {
+    margin-top: vp(132);
+    padding: vp(104) 0px vp(122) 0px;
+  }
+  @include ov {
+    margin-top: 132px;
+    padding: 104px 0px 122px 0px;
+  }
+  a {
+    color: #fff;
+  }
+  &_inner {
+    width: v(335);
+    margin: 0px auto;
+    @include pc {
+      width: vp(1152);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    @include ov {
+      width: 1152px;
+    }
+  }
+  &_header {
+    &_logo {
+      width: v(222);
+      line-height: 0;
+      display: block;
+      @include pc {
+        width: vp(287);
+      }
+      @include ov {
+        width: 287px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &_share {
+      margin-top: v(26);
+      display: flex;
+      align-items: center;
+      @include pc {
+        margin-top: vp(91);
+      }
+      @include ov {
+        margin-top: 91px;
+      }
+      &_link {
+        width: v(24);
+        height: v(24);
+        display: block;
+        margin-left: v(24);
+        @include pc {
+          width: vp(28);
+          height: vp(28);
+          margin-left: vp(36);
+        }
+        @include ov {
+          width: 28px;
+          height: 28px;
+          margin-left: 36px;
+        }
+        &:first-child {
+          margin-left: 0px;
+        }
+        &_facebook {
+          background: url(/assets/img/cmn/icon-facebook-w.svg) center center / contain no-repeat;
+        }
+        &_twitter {
+          background: url(/assets/img/cmn/icon-twitter-w.svg) center center / contain no-repeat;
+        }
+      }
+    }
+  }
+  &_nav {
+    margin-top: v(42);
+    @include pc {
+      width: vp(643);
+      margin-top: 0px;
+      display: flex;
+      justify-content: space-between;
+    }
+    @include ov {
+      width: 643px;
+    }
+    &_link {
+      margin-top: v(24);
+      display: block;
+      font-family: $FONT-MYRIAD;
+      font-style: italic;
+      font-weight: 700;
+      @include fv(28, 28);
+      &:first-child {
+        margin-top: 0px;
+      }
+      @include pc {
+        @include fvp(28, 28);
+        margin: 0px;
+      }
+      @include ov {
+        @include fr(28, 28);
+      }
+    }
+  }
+  &_copy {
+    margin-top: v(37);
+    @include fv(12, 12);
+    @include pc {
+      width: 100%;
+      margin-top: vp(-10);
+      text-align: right;
+      @include fvp(12, 12);
+    }
+    @include pc {
+      @include fr(12, 12);
+      margin-top: -10px;
+    }
+  }
+}

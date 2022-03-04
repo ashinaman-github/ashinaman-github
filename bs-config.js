@@ -36,9 +36,9 @@ module.exports = {
               cmd = `cross-conf-env npm run html -- ${file.split(process.env.npm_package_config_entry)[1]}`;
             }
           break;
-          case '.scss':
-            cmd = "cross-conf-env npm-run-all -p \"css -- -o "+process.env.npm_package_config_out+"\" \"autoprefixer\"";
-          break;
+          // case '.scss':
+          //   cmd = "cross-conf-env npm-run-all -p \"css -- -o "+process.env.npm_package_config_out+"\" \"autoprefixer\"";
+          // break;
         }
         if(cmd != '') {
           return get(

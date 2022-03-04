@@ -1,0 +1,245 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  list-style-type: none; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle;
+  outline: none;
+  border: none; }
+
+picture {
+  display: block;
+  line-height: 0; }
+
+img {
+  line-height: 0; }
+
+.guide::before, body::before {
+  content: '';
+  max-width: 89.33333vw;
+  margin: auto;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 1px 0px 0px rgba(255, 0, 0, 0.2) inset, -1px 0px 0px rgba(255, 0, 0, 0.2) inset;
+  pointer-events: none;
+  z-index: 10000; }
+  @media screen and (min-width: 769px) {
+    .guide::before, body::before {
+      width: 83.33333%;
+      max-width: 1200px; } }
+
+.guide::after, body::after {
+  content: '';
+  width: 1px;
+  height: 100vh;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 10000; }
+
+html {
+  font-size: calc(100vw / 3.75);
+  background: #F2F2F2; }
+  @media screen and (min-width: 769px) {
+    html {
+      font-size: 62.5%; } }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-feature-settings: "palt" 1;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  font-size: 4vw;
+  line-height: 1.8em;
+  letter-spacing: 0.004em;
+  display: none; }
+  body a {
+    color: #333; }
+  @media screen and (min-width: 769px) {
+    body {
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 1.75em;
+      letter-spacing: 0.004em; } }
+
+.myriad-italic-bold {
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: italic; }
+
+.myriad-italic {
+  font-family: myriad-pro, sans-serif;
+  font-weight: 400;
+  font-style: italic; }
+
+.none {
+  display: none; }
+
+.gbl-header {
+  display: inline-block;
+  position: fixed;
+  top: 8.26667vw;
+  left: 5.33333vw;
+  line-height: 0;
+  z-index: 3; }
+  @media screen and (min-width: 769px) {
+    .gbl-header {
+      top: 52px;
+      left: 120px; } }
+  .gbl-header_logo {
+    width: 59.2vw;
+    display: block;
+    font-size: 0; }
+    @media screen and (min-width: 769px) {
+      .gbl-header_logo {
+        width: 287px; } }
+    .gbl-header_logo img {
+      width: 100%;
+      height: auto; }
+
+.gbl-nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2; }
+  .gbl-nav_menuWrap {
+    padding: 32.53333vw 13.33333vw 0px; }
+    .gbl-nav_menuWrap_list {
+      margin-top: 8.53333vw; }
+      .gbl-nav_menuWrap_list:first-child {
+        margin-top: 0; }
+      .gbl-nav_menuWrap_list a {
+        font-family: myriad-pro, sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 8.53333vw;
+        line-height: 1em; }
+  .gbl-nav_shareWrap {
+    padding: 13.33333vw;
+    display: flex;
+    align-items: center; }
+    @media screen and (min-width: 769px) {
+      .gbl-nav_shareWrap {
+        display: none; } }
+    .gbl-nav_shareWrap_list {
+      margin-right: 6.4vw; }
+      .gbl-nav_shareWrap_list:last-child {
+        margin-right: 0px; }
+    .gbl-nav_shareWrap_link {
+      width: 6.4vw;
+      height: 6.4vw;
+      display: block; }
+      .gbl-nav_shareWrap_link_facebook {
+        background: url(/assets/img/cmn/icon-facebook.svg) center center/contain no-repeat; }
+      .gbl-nav_shareWrap_link_twitter {
+        background: url(/assets/img/cmn/icon-twitter.svg) center center/contain no-repeat; }
+
+.gbl-navTrigger {
+  width: 12.8vw;
+  height: 12.8vw;
+  position: fixed;
+  top: 4.26667vw;
+  right: 5.33333vw;
+  background: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  z-index: 3; }
+  @media screen and (min-width: 769px) {
+    .gbl-navTrigger {
+      display: none; } }
+  .gbl-navTrigger_inner {
+    width: 4.26667vw;
+    height: 2.66667vw;
+    position: relative; }
+    .gbl-navTrigger_inner span {
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 0px;
+      background: #fff; }
+      .gbl-navTrigger_inner span:first-child {
+        top: 0px; }
+      .gbl-navTrigger_inner span:last-child {
+        bottom: 0px; }

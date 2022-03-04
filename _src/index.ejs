@@ -1,24 +1,208 @@
 <%
   meta = {
-    title: 'test',
+    title: 'top',
     desc: ''
   };
 %>
 <!DOCTYPE html>
-<html lang="ja" class="">
+<html lang="ja" class="pg-top">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%= meta.title %></title>
-    <meta name="description" content="<%= meta.desc %>" />
-    <meta name="keywords" content="">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <%- include('./_inc/_meta', {meta}) %>
   </head>
   <body>
-    <%- include('_inc/_header', {meta}) %>
-    トップページ
-    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <%- include('./_inc/_header') %>
+    <%- include('./_inc/_nav') %>
+    <main class="main">
+
+      <section class="pg-top_mv">
+        <div class="pg-top_mv_inner inner">
+          <div class="pg-top_mv_title">
+            <div class="pg-top_mv_title_main">
+              <img src="/assets/img/top/text-gonext.svg" alt="">
+            </div>
+            <div class="pg-top_mv_title_jp">
+              <img src="/assets/img/top/text-newwind.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="pg-top_mv_bg"></div>
+      </section>
+
+      <section class="pg-top_feature">
+        <div class="pg-top_feature_inner inner">
+          <div class="pg-top_feature_header">
+            <span>私たちは風となって、</span><br><span>変革する人の背中を</span><br class="none_pc"><span>押します。</span>
+          </div>
+          <div class="pg-top_feature_body">
+            <div class="pg-top_feature_body_read">
+              <p>部署や企業を越えた<br class="none_pc">クロスファンクショナルチームで<br class="none_pc">風穴を開け、<br>現場からスピーディーな<br class="none_pc">イノベーションを巻き起こす。<br>変革への道しるべを共創し、<br>ビジネスに追い風を吹かせる。</p>
+              <p>クリエイティブなプロセスで次の未来へ。<br>行こう、Nexと。</p>
+            </div>
+            <a href="" class="pg-top_feature_body_link">
+              <img src="/assets/img/top/text-gonext.svg" alt="">
+              <i>
+                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 6L0 6L0 4L9 4V0L14 5L9 10V6Z">
+                </svg>
+              </i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="pg-top_story">
+        <div class="pg-top_heading">
+          <div class="pg-top_heading_inner inner">
+            <p class="pg-top_heading_title"><b>our</b>story</p>
+          </div>
+        </div>
+        <div class="pg-top_story_worksMain">
+          <div class="pg-top_story_worksMain_inner inner">
+            <ul class="pg-top_story_works">
+              <li class="pg-top_story_works_list">
+                <a href="#" class="pg-top_story_works_link">
+                  <picture class="pg-top_story_works_picture">
+                    <img src="/assets/img/works/work1.jpg" width="100%" alt="">
+                  </picture>
+                  <p class="pg-top_story_works_client">ペプシ</p>
+                  <p class="pg-top_story_works_name">GO NEXTキャンペーン</p>
+                </a>
+              </li>
+              <li class="pg-top_story_works_list">
+                <a href="#" class="pg-top_story_works_link">
+                  <picture class="pg-top_story_works_picture">
+                    <img src="/assets/img/works/work2.jpg" width="100%" alt="">
+                  </picture>
+                  <p class="pg-top_story_works_client">檜原村</p>
+                  <p class="pg-top_story_works_name">アナログが根強い、リーガル業務のDX</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pg-top_story_worksOther">
+          <div class="pg-top_story_worksOther_inner inner">
+            <ul class="pg-top_story_works">
+              <li class="pg-top_story_works_list">
+                <a href="#" class="pg-top_story_works_link">
+                  <picture class="pg-top_story_works_picture">
+                    <img src="/assets/img/works/work3.jpg" width="100%" alt="">
+                  </picture>
+                  <p class="pg-top_story_works_client">株式会社バイオテック</p>
+                  <p class="pg-top_story_works_name">記事タイトルしたイノベーション</p>
+                </a>
+              </li>
+              <li class="pg-top_story_works_list">
+                <a href="#" class="pg-top_story_works_link">
+                  <picture class="pg-top_story_works_picture">
+                    <img src="/assets/img/works/work4.jpg" width="100%" alt="">
+                  </picture>
+                  <p class="pg-top_story_works_client">ユニファースト株式会社</p>
+                  <p class="pg-top_story_works_name">記事タイトルしたイノベーション</p>
+                </a>
+              </li>
+              <li class="pg-top_story_works_list">
+                <a href="#" class="pg-top_story_works_link">
+                  <picture class="pg-top_story_works_picture">
+                    <img src="/assets/img/works/work5.jpg" width="100%" alt="">
+                  </picture>
+                  <p class="pg-top_story_works_client">檜原村</p>
+                  <p class="pg-top_story_works_name">記事タイトルしたイノベーション</p>
+                </a>
+              </li>
+              <li class="pg-top_story_works_list">
+                <a href="#" class="pg-top_story_works_link">
+                  <picture class="pg-top_story_works_picture">
+                    <img src="/assets/img/works/work6.jpg" width="100%" alt="">
+                  </picture>
+                  <p class="pg-top_story_works_client">株式会社バイオテック</p>
+                  <p class="pg-top_story_works_name">記事タイトルしたイノベーション</p>
+                </a>
+              </li>
+              <li class="pg-top_story_works_list">
+                <a href="#" class="pg-top_story_works_link">
+                  <picture class="pg-top_story_works_picture">
+                    <img src="/assets/img/works/work7.jpg" width="100%" alt="">
+                  </picture>
+                  <p class="pg-top_story_works_client">ユニファースト株式会社</p>
+                  <p class="pg-top_story_works_name">記事タイトルしたイノベーション</p>
+                </a>
+              </li>
+              <li class="pg-top_story_works_list">
+                <a href="#" class="pg-top_story_works_link">
+                  <picture class="pg-top_story_works_picture">
+                    <img src="/assets/img/works/work8.jpg" width="100%" alt="">
+                  </picture>
+                  <p class="pg-top_story_works_client">旅工房</p>
+                  <p class="pg-top_story_works_name">記事タイトルしたイノベーション</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pg-top_story_more">
+          <a href="#">
+            <p>show more</p>
+            <i>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00015 13.5246L7.9995 13.5253L5.99938 11.4021L6.00003 11.4014L0.00049391 5.03256L2.00062 2.90932L8.00015 9.27816L13.9999 2.90912L16 5.03236L10.0003 11.4014L10.0011 11.4023L8.001 13.5255L8.00015 13.5246Z" fill="#333333"/>
+              </svg>
+            </i>
+          </a>
+        </div>
+      </section>
+
+      <section class="pg-top_service">
+        <div class="pg-top_service_inner inner">
+          <div class="pg-top_service_header">
+            <div class="pg-top_service_header_title">
+              <div class="pg-top_heading">
+                <div class="pg-top_heading_inner inner">
+                  <p class="pg-top_heading_title"><b>our</b>service</p>
+                </div>
+              </div>
+            </div>
+            <div class="pg-top_service_header_view">
+              <a href="#" class="pg-top_service_header_view_link">
+                <i><svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6L0 6L0 4L9 4V0L14 5L9 10V6Z"></svg></i>
+                <p>View</p>
+              </a>
+            </div>
+          </div>
+          <div class="pg-top_service_body">
+            <div class="pg-top_service_body_box">
+              <div class="pg-top_service_body_title">
+                <p class="pg-top_service_body_title_en"><span>01</span>Direct</p>
+                <p class="pg-top_service_body_title_jp">価値を引き出し、 道標をつくる</p>
+              </div>
+              <div class="pg-top_service_body_detail">
+                <p>自社・競合・市場分析をもとに、ブランドの個性・強みといった「らしさ」を引き出します。<br>本質的な課題を再定義し、目標達成までの道標をつくります。</p>
+              </div>
+            </div>
+            <div class="pg-top_service_body_box">
+              <div class="pg-top_service_body_title">
+                <p class="pg-top_service_body_title_en"><span>02</span>Create</p>
+                <p class="pg-top_service_body_title_jp">価値を表現する、ブランド体験を創造する</p>
+              </div>
+              <div class="pg-top_service_body_detail">
+                <p>ブランドの「らしさ」を直観的に感じられる<br>唯一無二なブランド体験を創造します。</p>
+              </div>
+            </div>
+            <div class="pg-top_service_body_box">
+              <div class="pg-top_service_body_title">
+                <p class="pg-top_service_body_title_en"><span>03</span>Accelerate</p>
+                <p class="pg-top_service_body_title_jp">ビジネスを加速させる</p>
+              </div>
+              <div class="pg-top_service_body_detail">
+                <p>Web広告から展示会企画運営まで、オンオフを問わない一貫性のあるマーケティング施策の実行によって、目標達成への追い風を吹かせます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('./_inc/_talk') %>
+    <%- include('./_inc/_footer') %>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
-

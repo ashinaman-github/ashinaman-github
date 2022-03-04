@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.gbl-talk {
+  padding-top: v(50);
+  text-align: center;
+  @include pc {
+    padding-top: vp(148);
+  }
+  @include ov {
+    padding-top: 148px;
+  }
+  .pg-top_heading_inner {
+    justify-content: center;
+  }
+  &_body {
+    margin-top: v(24);
+    @include pc {
+      margin-top: vp(40);
+    }
+    @include ov {
+      margin-top: 40px;
+    }
+    p {
+      @include fv(15, 27, 4);
+      @include pc {
+        @include fvp(16, 28, 4);
+      }
+      @include ov {
+        @include fr(16, 28, 4);
+      }
+    }
+  }
+}
