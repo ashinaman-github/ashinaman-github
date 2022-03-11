@@ -39,6 +39,9 @@ html {
   font-size: calc(100vw / 3.75);
   background: #F2F2F2;
   @include pc() {
+    font-size: calc(100vw / 14.40);
+  }
+  @include ov {
     font-size: 62.5%;
   }
   &::-webkit-scrollbar {
@@ -59,26 +62,31 @@ body {
   -webkit-font-smoothing: antialiased;
   @extend .guide;
   color: #333;
-  @include fv(15, 27, 4);
   a {
     color: #333;
   }
-  @include pc {
-    @include fr(16, 28, 4);
+  h1, h2, h3, h4, h5, h6, p, b, strong, dt, dd {
+    @include fv(15, 27, 4);
+    @include pc {
+      @include fvp(16, 28, 4);
+    }
+    @include ov {
+      @include fr(16, 28, 4);
+    }
   }
 }
 
-.myriad-italic-bold {
-  font-family: myriad-pro, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
+// .myriad-italic-bold {
+//   font-family: myriad-pro, sans-serif;
+//   font-weight: 700;
+//   font-style: italic;
+// }
 
-.myriad-italic {
-  font-family: myriad-pro, sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
+// .myriad-italic {
+//   font-family: myriad-pro, sans-serif;
+//   font-weight: 400;
+//   font-style: italic;
+// }
 
 .none {
   display: none;
@@ -120,3 +128,63 @@ body {
   }
 }
 
+.viewbtn {
+  @include pc {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &_link {
+    width: v(102);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include pc {
+      width: vp(150);
+    }
+    @include ov {
+      width: 150px;
+    }
+    i {
+      width: v(48);
+      height: v(48);
+      line-height: 0;
+      background: #333;
+      border-radius: 100%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      @include pc {
+        width: vp(88);
+        height: vp(88);
+      }
+      @include ov {
+        width: 88px;
+        height: 88px;
+      }
+      svg {
+        width: v(14);
+        height: auto;
+        @include pc {
+          width: vp(24);
+        }
+        @include ov {
+          width: 24px;
+        }
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    p {
+      @include fv(18, 27);
+      font-family: $FONT-MYRIAD;
+      font-weight: 700;
+      @include pc {
+        @include fvp(18, 27);
+      }
+      @include ov {
+        @include fr(18, 27);
+      }
+    }
+  }
+}

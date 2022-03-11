@@ -1,0 +1,1057 @@
+@charset "UTF-8";
+
+.pg-works {
+
+}
+
+.sec-works_mt {
+  padding-top: v(132);
+  @include pc {
+    padding-top: v(270, pc);
+  }
+  @include ov {
+    padding-top: 270px;
+  }
+  &_title1 {
+    width: v(113);
+    position: relative;
+    line-height: 0;
+    @include pc {
+      width: v(190, pc);
+    }
+    @include ov {
+      width: 190px;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: v(3);
+      background: #333333;
+      position: absolute;
+      left: v(-5);
+      bottom: v(9);
+      @include pc {
+        height: vp(3);
+        bottom: vp(13);
+        left: vp(-5);
+      }
+      @include ov {
+        height: 3px;
+        bottom: 13px;
+        left: -5px;
+      }
+    }
+  }
+  &_title2 {
+    width: v(252);
+    margin-top: v(-10);
+    position: relative;
+    line-height: 0;
+    @include pc {
+      width: vp(522);
+      margin-top: vp(-50);
+    }
+    @include ov {
+      width: 522px;
+      margin-top: -50px;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: v(3);
+      background: #333333;
+      position: absolute;
+      left: v(-5);
+      bottom: v(5);
+      @include pc {
+        height: vp(3);
+        left: vp(-5);
+        bottom: vp(17);
+      }
+      @include ov {
+        height: 3px;
+        left: -5px;
+        bottom: 17px;
+      }
+    }
+  }
+  &_read {
+    margin-top: v(30);
+    @include pc {
+      margin-top: v(40, pc);
+    }
+    @include ov {
+      margin-top: 40px;
+    }
+    p {
+      @include fv(17, 32, 140);
+      font-weight: 700;
+      @include pc {
+        @include fvp(25, 45, 120);
+      }
+      @include ov {
+        @include fr(25,  45, 120);
+      }
+    }
+  }
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.sec-works_mv {
+  padding-top: v(42);
+  overflow: hidden;
+  position: relative;
+  @include pc {
+    padding-top: vp(74);
+  }
+  @include ov {
+    padding-top: 74px;
+  }
+  &::after {
+    content: '';
+    width: 100%;
+    height: v(115);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background: #272727;
+    z-index: 1;
+    @include pc {
+      height: vp(380);
+    }
+    @include ov {
+      height: 380px;
+    }
+  }
+  &_slider {
+    margin-top: v(16);
+    position: relative;
+    z-index: 2;
+    @include pc {
+      margin-top: vp(30);
+      margin-left: v(70);
+    }
+    @include ov {
+      margin-top: 30px;
+      margin-left: 70px;
+    }
+    .swiper {
+      overflow: visible;
+    }
+  }
+  &_pagenation {
+    position: relative;
+    z-index: 2;
+  }
+  &_listwrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &_list {
+      width: v(23);
+      height: v(23);
+      margin-left: v(12);
+      position: relative;
+      cursor: pointer;
+      line-height: 0;
+      * {
+        line-height: 0;
+      }
+      @include pc {
+        width: vp(23);
+        height: vp(23);
+        margin-left: vp(12);
+      }
+      @include ov {
+        width: 23px;
+        height: 23px;
+        margin-left: 12px;
+      }
+      &:first-child {
+        margin-left: 0px;
+      }
+      &.isCurrent {
+        &::after {
+          background: #333;
+          svg {
+            stroke-dasharray: 0 0;
+          }
+        }
+      }
+      &::after {
+        content: '';
+        width: v(8);
+        height: v(8);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0px);
+        background: #C4C4C4;
+        border-radius: 50%;
+        @include pc {
+          width: vp(7);
+          height: vp(7);
+        }
+        @include ov {
+          width: 7px;
+          height: 7px;
+        }
+      }
+      svg {
+        width: 100%;
+        height: auto;
+        fill: none;
+        stroke: #333;
+        stroke-width: v(1);
+        @include pc {
+          stroke-width: vp(1);
+        }
+        @include ov {
+          stroke-width: 1px;
+        }
+      }
+    }
+  }
+}
+
+.sec-works_about {
+  padding-top: v(60);
+  background: #272727;
+  color: #fff;
+  @include pc {
+    padding-top: vp(150);
+  }
+  @include ov {
+    padding-top: 150px;
+  }
+  &.isLast {
+    padding-bottom: v(70);
+    @include pc {
+      padding-bottom: vp(204);
+    }
+    @include ov {
+      padding-bottom: 204px;
+    }
+  }
+  &_inner {
+    @include pc {
+      width: vp(1008);
+    }
+    @include ov {
+      width: 1008px;
+    }
+  }
+  &_heading {
+    &_title {
+      @include pc {
+        display: flex;
+      }
+      &_en {
+        font-family: $FONT-MYRIAD;
+        display: flex;
+        @include pc {
+          width: vp(350);
+        }
+        @include ov {
+          width: 350px;
+        }
+        * {
+          @include fv(36, 36);
+          font-weight: 700;
+          @include pc {
+            @include fvp(50, 50, 20);
+          }
+          @include ov {
+            @include fr(50, 50, 20);
+          }
+        }
+        span {
+          margin-right: v(13);
+          @include pc {
+            margin-right: vp(12);
+          }
+          @include ov {
+            margin-right: 12px;
+          }
+        }
+      }
+      &_detail {
+        margin-top: v(10);
+        @include pc {
+          margin-top: 0;
+          flex: 1;
+        }
+        &_title {
+          span {
+            @include fv(21, 25, 120);
+            font-weight: 700;
+            border-bottom: v(1) solid #fff;
+            @include pc {
+              @include fvp(31, 55, 40);
+            }
+            @include ov {
+              @include fr(31, 55, 40);
+            }
+          }
+        }
+        &_read {
+          width: 100%;
+          margin-top: v(20);
+          @include fv(15, 27, 130);
+          @include sp {
+            br {
+              display: none;
+            }
+          }
+          @include pc {
+            margin-top: vp(29);
+            @include fvp(16, 30, 120);
+          }
+          @include ov {
+            margin-top: 29px;
+            @include fr(16, 30, 120);
+          }
+        }
+      }
+    }
+  }
+  &_body {
+    margin-top: v(35);
+    @include pc {
+      margin-top: vp(66);
+    }
+    @include ov {
+      margin-top: 66px;
+    }
+  }
+  &_flowwrap {
+    @include pc {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_flow {
+      margin-top: v(54);
+      padding: v(13) 0px v(20) 0px;
+      border: v(1) solid #fff;
+      position: relative;
+      @include pc {
+        width: vp(280);
+        margin: 0px;
+        padding: vp(24) 0;
+        border-width: vp(1);
+      }
+      @include ov {
+        width: 280px;
+        padding: 24px 0px;
+        border-width: 1px;
+      }
+      &::after {
+        content: '';
+        width: v(54);
+        height: v(38);
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        margin: 0px auto;
+        background: url(/assets/img/works/flow.svg) center center / contain no-repeat;
+        bottom: v(-46);
+        @include pc {
+          width: vp(23);
+          height: 100%;
+          background: url(/assets/img/works/flow-pc.svg) center center / contain no-repeat;
+          right: vp(-375);
+          bottom: 0px;
+        }
+        @include ov {
+          width: 23px;
+          right: -375px;
+        }
+      }
+      &:first-child {
+        margin-top: 0px;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+      dl {
+        text-align: center;
+        dt {
+          margin-bottom: v(13);
+          @include pc {
+            margin-bottom: vp(30);
+          }
+          @include ov {
+            margin-bottom: 30px;
+          }
+          p {
+            display: inline-block;
+            @include fv(17, 20, 4);
+            border-bottom: v(1) solid #fff;
+            @include pc {
+              @include fvp(25, 30, 4);
+              border-bottom-width: vp(1);
+            }
+            @include ov {
+              @include fr(25, 30, 4);
+              border-bottom-width: 1px;
+            }
+          }
+        }
+        dd {
+          @include fv(13, 19, 4);
+          @include pc {
+            @include fvp(16, 35, 100);
+          }
+          @include ov {
+            @include fr(16, 35, 100);
+          }
+        }
+      }
+    }
+  }
+  &_panels {
+    margin-top: v(-16);
+    display: flex;
+    flex-wrap: wrap;
+    @include pc {
+      margin-top: vp(-52);
+    }
+    @include ov {
+      margin-top: -52px;
+    }
+    &_list {
+      width: v(160);
+      margin: v(16) v(15) 0px 0px;
+      @include sp {
+        &:nth-child(2n) {
+          margin-right: 0px;
+        }
+      }
+      @include pc {
+        width: vp(306);
+        margin: vp(52) vp(44) 0px 0px;
+        &:nth-child(3n) {
+          margin-right: 0px;
+        }
+      }
+      @include ov {
+        width: 306px;
+        margin: 52px 44px 0px 0px;
+      }
+    }
+    &_icon {
+      height: v(90);
+      border: v(1) solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include pc {
+        height: vp(172);
+        border-width: vp(1);
+      }
+      @include ov {
+        height: 172px;
+        border-width: 1px;
+      }
+      &_site {
+        width: v(64);
+        margin: 0px auto;
+        display: block;
+        @include pc {
+          width: vp(120);
+        }
+        @include ov {
+          width: 120px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &_name {
+      margin-top: v(8);
+      @include fv(13, 28);
+      @include pc {
+        margin-top: vp(18);
+        @include fvp(16, 28, 100);
+      }
+      @include ov {
+        margin-top: 18px;
+        @include fr(16, 28, 100);
+      }
+    }
+  }
+}
+
+.pg-works_teams {
+  padding-top: v(54);
+  @include pc {
+    padding-top: vp(140);
+  }
+  @include ov {
+    padding-top: 140px;
+  }
+  &_title {
+    span {
+      @include fv(48, 48, 4);
+      font-family: $FONT-MYRIAD;
+      font-weight: 700;
+      display: inline-block;
+      position: relative;
+      @include pc {
+        @include fvp(80, 80, 4);
+      }
+      @include ov {
+        @include fr(80, 80, 4);
+      }
+      &::after {
+        content: '';
+        width: 100%;
+        height: v(3);
+        position: absolute;
+        left: 0px;
+        bottom: v(3);
+        background: #333;
+        @include pc {
+          height: vp(3);
+          bottom: vp(7);
+        }
+        @include ov {
+          height: 3px;
+          bottom: 7px;
+        }
+      }
+    }
+  }
+  &_read {
+    margin-top: v(33);
+    @include fv(17, 32, 180);
+    @include sp {
+      br {
+        display: none;
+      }
+    }
+    @include pc {
+      margin-top: vp(60);
+      @include fvp(25, 45, 130);
+    }
+    @include ov {
+      margin-top: 60px;
+      @include fr(25, 45, 130);
+    }
+  }
+}
+
+.pg-works_value {
+  margin-top: v(40);
+  @include pc {
+    margin-top: vp(90);
+  }
+  @include ov {
+    margin-top: 90px;
+  }
+  &_inner {
+    padding: v(45) v(24) v(42) v(24);
+    background: #333;
+    color: #fff;
+    @include pc {
+      padding: vp(88) vp(186) vp(88) vp(96);
+    }
+    @include ov {
+      padding: 88px 96px;
+    }
+  }
+  &_header {
+    @include pc {
+      display: flex;
+    }
+    &_title {
+      @include pc {
+        width: vp(388);
+      }
+      @include ov {
+        width: 388px;
+      }
+      span {
+        display: inline-block;
+        @include fv(21, 23, 80);
+        font-weight: 700;
+        position: relative;
+        @include pc {
+          @include fvp(31, 40, 50);
+        }
+        @include ov {
+          @include fr(31, 40, 50);
+        }
+        &::after {
+          content: '';
+          width: 100%;
+          height: v(1);
+          background: #fff;
+          position: absolute;
+          left: 0px;
+          bottom: 0px;
+          @include pc {
+            height: vp(1);
+          }
+          @include ov {
+            height: 1px;
+          }
+        }
+      }
+    }
+    &_theme {
+      margin-top: v(35);
+      @include pc {
+        width: vp(530);
+        margin-top: 0px;
+      }
+      @include ov {
+        width: 530px;
+      }
+      &_title1 {
+        width: v(230);
+        @include pc {
+          width: vp(520);
+        }
+        @include ov {
+          width: 520px;
+        }
+      }
+      &_title2 {
+        width: v(139);
+        @include pc {
+          width: vp(198);
+        }
+        @include ov {
+          width: 198px;
+        }
+      }
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &_body {
+    margin-top: v(16);
+    @include sp {
+      br {
+        display: none;
+      }
+    }
+    @include pc {
+      margin: vp(30) 0px 0px vp(388);
+    }
+    @include ov {
+      margin: 30px 0px 0px 388px;
+    }
+    &_read {
+      @include fv(15, 27, 100);
+      @include pc {
+        @include fvp(16, 28, 4);
+      }
+      @include ov {
+        @include fr(16, 28, 4);
+      }
+    }
+    &_values {
+      margin-top: v(26);
+      list-style-type: disc;
+      @include pc {
+        margin-top: vp(30);
+      }
+      @include ov {
+        margin-top: 30px;
+      }
+      li {
+        margin-left: 1em;
+        @include fv(16, 24, 4);
+        font-family: $FONT-MYRIAD;
+        font-weight: 700;
+        @include pc {
+          @include fvp(26, 38, 4);
+        }
+        @include ov {
+          @include fr(26, 38, 4);
+        }
+      }
+    }
+  }
+}
+
+.pg-works_cmntitle {
+  &_title {
+    @include fv(30, 30);
+    font-family: $FONT-MYRIAD;
+    display: inline-block;
+    position: relative;
+    @include pc {
+      @include fvp(56, 56);
+    }
+    @include ov {
+      @include fr(56, 56);
+    }
+    * {
+      @include fv(30, 30);
+      font-family: $FONT-MYRIAD;
+      @include pc {
+        @include fvp(56, 56);
+      }
+      @include ov {
+        @include fr(56, 56);
+      }
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: v(3);
+      position: absolute;
+      left: 0px;
+      bottom: 0;
+      background: #333;
+      @include pc {
+        height: vp(3);
+        bottom: vp(5);
+      }
+      @include ov {
+        height: 3px;
+        bottom: 5px;
+      }
+    }
+  }
+}
+
+.pg-works_wf {
+  padding-top: v(44);
+  @include pc {
+    padding-top: vp(120);
+  }
+  @include ov {
+    padding-top: 120px;
+  }
+  &_body {
+    margin-top: v(42);
+    @include pc {
+      margin-top: vp(65);
+      display: flex;
+      justify-content: space-between;
+    }
+    @include ov {
+      margin-top: 65px;
+    }
+  }
+  &_block {
+    margin-top: v(28);
+    padding: v(24) v(24) v(40) v(24);
+    border: v(1) solid #333;
+    @include pc {
+      width: vp(576);
+      margin-top: 0px;
+      padding: 0px 0px vp(20) 0px;
+      border-width: vp(1);
+    }
+    @include ov {
+      width: 576px;
+      padding-bottom: 20px;
+      border-width: 1px;
+    }
+    &:first-child {
+      margin-top: 0px;
+    }
+    &_title {
+      @include pc {
+        margin: vp(25) 0px 0px vp(32);
+      }
+      @include ov {
+        margin: 25px 0px 0px 32px;
+      }
+      p {
+        display: inline-block;
+        @include fv(15, 26, 100);
+        font-weight: 700;
+        border-bottom: solid v(1) #333;
+        @include pc {
+          @include fvp(20, 30, 120);
+          border-bottom-width: vp(1);
+        }
+        @include ov {
+          @include fr(20, 30, 120);
+          border-bottom-width: 1px;
+        }
+      }
+    }
+    &_picture {
+      margin-top: v(24);
+      @include pc {
+        width: vp(450);
+        margin: vp(24) auto 0px;
+      }
+      @include ov {
+        width: 450px;
+        margin-top: 24px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.pg-works_com {
+  padding-top: v(44);
+  @include pc {
+    padding-top: vp(100);
+  }
+  @include ov {
+    padding-top: 100px;
+  }
+  &_inner {
+    @include pc {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &_header {
+    @include pc {
+      flex: 1;
+    }
+    &_read {
+      margin-top: v(17);
+      @include pc {
+        margin-top: vp(40);
+      }
+      @include ov {
+        margin-top: 40px;
+      }
+      p {
+        @include fv(15, 27, 4);
+        @include pc {
+         @include fvp(16, 28, 80);
+        }
+        @include ov {
+          @include fr(16, 28, 80);
+        }
+      }
+    }
+  }
+  &_body {
+    margin-top: v(30);
+    @include pc {
+      width: vp(728);
+      margin-top: 0px;
+    }
+    @include ov {
+      width: 728px;
+    }
+    &_listwrap {
+      margin-top: v(-28);
+      display: flex;
+      flex-wrap: wrap;
+      @include pc {
+        margin-top: vp(-50);
+        justify-content: center;
+      }
+      @include ov {
+        margin-top: -50px;
+      }
+      li {
+        width: v(96);
+        margin: v(28) v(23) 0px 0px;
+        @include sp {
+          &:nth-child(3n) {
+            margin-right: 0px;
+          }
+        }
+        @include pc {
+          width: vp(120);
+          margin: vp(50) vp(32) 0px 0px;
+          &:nth-child(5n) {
+            margin-right: 0px;
+          }
+        }
+        @include ov {
+          width: 120px;
+          margin: 50px 32px 0px 0px;
+        }
+      }
+    }
+    &_icon {
+      width: v(96);
+      height: v(96);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 100%;
+      @include pc {
+        width: vp(120);
+        height: vp(120);
+      }
+      @include ov {
+        width: 120px;
+        height: 120px;
+      }
+      img {
+        width: 100%;
+        max-width: v(40);
+        @include pc {
+          max-width: vp(64);
+        }
+        @include ov {
+          max-width: 64px;
+        }
+      }
+    }
+    &_name {
+      margin-top: v(8);
+      @include fv(12, 18, -10);
+      font-weight: 700;
+      text-align: center;
+      @include pc {
+        margin-top: vp(22);
+        @include fvp(14, 21, 10);
+      }
+      @include ov {
+        margin-top: 22px;
+        @include fr(14, 21, 10);
+      }
+    }
+  }
+}
+
+.pg-works_works {
+  padding-top: v(60);
+  overflow: hidden;
+  @include pc {
+    padding-top: vp(132);
+  }
+  @include ov {
+    padding-top: 132px;
+  }
+  &_header {
+    &_title {
+      position: relative;
+      display: inline-block;
+      span {
+        @include fv(48, 48);
+        font-family: $FONT-MYRIAD;
+        font-weight: 700;
+        @include pc {
+          @include fvp(80, 80);
+        }
+        @include ov {
+          @include fr(80, 80);
+        }
+      }
+      &::after {
+        content: '';
+        width: 100%;
+        height: v(3);
+        background: #333;
+        position: absolute;
+        left: 0px;
+        bottom: v(5);
+        @include pc {
+          height: vp(3);
+          bottom: vp(10);
+        }
+        @include ov {
+          height: 3px;
+          bottom: 10px;
+        }
+      }
+    }
+  }
+  &_body {
+    margin-top: v(32);
+    @include pc {
+      margin-top: vp(74);
+    }
+    @include ov {
+      margin-top: 74px;
+    }
+    .swiper {
+      overflow: visible;
+    }
+    &_prev, &_next {
+      width: v(14);
+      height: v(14);
+      top: v(-50);
+      background: red;
+      position: absolute;
+      @include pc {
+        width: vp(15);
+        height: vp(15);
+        top: vp(-50);
+      }
+      @include ov {
+        width: 15px;
+        height: 15px;
+        top: -50px;
+      }
+    }
+    &_prev {
+      right: v(34);
+      cursor: pointer;
+      background: url(/assets/img/cmn/arrow-prev.svg) center center / contain no-repeat;
+      @include pc {
+        right: vp(30);
+      }
+      @include ov {
+        right: 30px;
+      }
+    }
+    &_next {
+      right: v(-3);
+      cursor: pointer;
+      background: url(/assets/img/cmn/arrow-next.svg) center center / contain no-repeat;
+      @include pc {
+        right: vp(-4);
+      }
+      @include ov {
+        right: -4px;
+      }
+    }
+  }
+  &_client {
+    margin-top: v(12);
+    @include fv(12, 18, 4);
+    @include pc {
+      margin-top: vp(16);
+      @include fvp(14, 21, 40);
+    }
+    @include ov {
+      margin-top: 16px;
+      @include fr(14, 21, 40);
+    }
+  }
+  &_name {
+    margin-top: v(3);
+    @include fv(15, 22, 4);
+    font-weight: 700;
+    @include pc {
+      margin-top: 0;
+      @include fvp(25, 45, 80);
+    }
+    @include ov {
+      @include fr(25, 45, 80);
+    }
+  }
+  &_view {
+    margin-top: v(26);
+    display: flex;
+    justify-content: flex-end;
+    @include pc {
+      margin-top: vp(58);
+    }
+    @include ov {
+      margin-top: 58px;
+    }
+  }
+}

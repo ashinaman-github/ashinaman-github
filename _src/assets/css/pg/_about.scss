@@ -5,12 +5,12 @@
 }
 
 .pg-about_feature {
-  padding-top: v(123);
+  padding-top: v(115);
   @include pc {
-    padding-top: vp(208);
+    padding-top: vp(220);
   }
   @include ov {
-    padding-top: 208px;
+    padding-top: 220px;
   }
   &_title {
     p {
@@ -20,10 +20,10 @@
       font-weight: 700;
       position: relative;
       @include pc {
-        @include fvp(100, 100);
+        @include fvp(100, 100, 10);
       }
       @include ov {
-        @include fr(100, 100);
+        @include fr(100, 100, 10);
       }
       &::after {
         content: '';
@@ -45,29 +45,29 @@
     }
   }
   &_heading {
-    margin-top: v(42);
+    margin-top: v(35);
     @include pc {
-      margin-top: vp(83);
+      margin-top: vp(120);
     }
     @include ov {
-      margin-top: 83px;
+      margin-top: 120px;
     }
     span {
-      @include fv(21, 35, 4);
+      @include fv(21, 32, 110);
       font-weight: 700;
       border-bottom: v(3) solid #333;
       @include pc {
-        @include fvp(39, 70);
+        @include fvp(39, 70, 70);
         border-bottom-width: vp(3);
       }
       @include ov {
-        @include fr(39, 70);
+        @include fr(39, 70, 70);
         border-bottom-width: 3px;
       }
     }
   }
   &_read {
-    margin-top: v(42);
+    margin-top: v(35);
     @include pc {
       margin-top: vp(47);
     }
@@ -75,14 +75,14 @@
       margin-top: 47px;
     }
     p {
-      @include fv(15, 28, 4);
+      @include fv(15, 28, 163);
       font-weight: 700;
       text-align: justify;
       @include pc {
-        @include fvp(20, 36, 4);
+        @include fvp(20, 36, 110);
       }
       @include ov {
-        @include fr(20, 36, 4);
+        @include fr(20, 36, 110);
       }
       br {
         @include sp {
@@ -94,7 +94,7 @@
   &_concept {
     width: v(335);
     height: v(309);
-    margin: v(42) auto 0px;
+    margin: v(40) auto 0px;
     position: relative;
     @include pc {
       width: vp(680);
@@ -160,22 +160,22 @@
       right: 0px;
       margin: 0px auto;
       .pg-about_feature_concept_block_vision & {
-        top: v(25);
+        top: v(13);
         @include pc {
-          top: vp(30);
+          top: vp(34);
         }
         @include ov {
-          top: 30px;
+          top: 34px;
         }
       }
       .pg-about_feature_concept_block_mission &,
       .pg-about_feature_concept_block_value & {
-        bottom: v(25);
+        bottom: v(13);
         @include pc {
-          bottom: vp(28);
+          bottom: vp(34);
         }
         @include ov {
-          bottom: 28px;
+          bottom: 34px;
         }
       }
       p {
@@ -208,13 +208,13 @@
       }
     }
     &_read {
-      @include fv(10, 14, 4);
+      @include fv(10, 14, 80);
       font-weight: 700;
       @include pc {
-        @include fvp(22, 28, 4);
+        @include fvp(22, 28, 80);
       }
       @include ov {
-        @include fr(22, 28, 4);
+        @include fr(22, 28, 80);
       }
     }
     &_circle {
@@ -248,13 +248,9 @@
   &_inner {
     @include pc {
       display: flex;
-      justify-content: space-between;
     }
   }
   &_header {
-    @include pc {
-      flex: 1;
-    }
     &_en {
       @include fv(16, 24);
       font-family: $FONT-MYRIAD;
@@ -283,22 +279,24 @@
     @include pc {
       width: vp(912);
       margin-top: 0px;
+      margin: 0px 0px 0px vp(115);
       border-top-width: 1px;
     }
     @include ov {
       width: 912px;
+      margin-left: 115px;
     }
     &_list {
       padding: v(23) 0px;
       border-bottom: v(1) solid #ccc;
       @include pc {
-        padding: vp(23) 0px;
+        padding: vp(24) 0px;
         border-bottom-width: 1px;
         display: flex;
         align-items: center;
       }
       @include ov {
-        padding: 23px 0px;
+        padding: 24px 0px;
       }
     }
     &_head {

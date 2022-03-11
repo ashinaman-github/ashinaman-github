@@ -6,6 +6,7 @@
   top: v(31);
   left: v(20);
   line-height: 0;
+  mix-blend-mode: difference;
   z-index: 3;
   @include pc {
     top: v(52, pc);

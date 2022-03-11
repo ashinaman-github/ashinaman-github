@@ -20,6 +20,7 @@
     width: v(400, pc);
     top: v(53, pc);
     right: v(120, pc);
+    mix-blend-mode: difference;
   }
   @include ov {
     width: 400px;
@@ -38,6 +39,7 @@
       margin-top: v(32);
       @include pc {
         margin: 0px;
+        color: #fff;
       }
       &:first-child {
         margin: 0;
@@ -87,6 +89,8 @@
   top: v(16);
   right: v(20);
   background: #333333;
+  background: #fff;
+  mix-blend-mode: difference;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,6 +112,7 @@
       position: absolute;
       left: 0px;
       background: #fff;
+      background: #000;
       transition: transform .4s ease;
       &:first-child {
         top: 0px;

@@ -16,6 +16,15 @@
     @include ov {
       @include fr(90, 90);
     }
+    * {
+      @include fv(48, 48);
+      @include pc {
+        @include fvp(90, 90);
+      }
+      @include ov {
+        @include fr(90, 90);
+      }
+    }
     b {
       margin-right: v(15);
       font-weight: bold;
@@ -45,7 +54,6 @@
     }
   }
 }
-
 
 .pg-top_mv {
   height: v(450);
@@ -465,12 +473,12 @@
 }
 
 .pg-top_service {
-  margin-top: v(55);
+  padding-top: v(55);
   @include pc {
-    margin-top: vp(148);
+    padding-top: vp(148);
   }
   @include ov {
-    margin-top: 148px;
+    padding-top: 148px;
   }
   &_inner {
     @include pc {
@@ -485,70 +493,13 @@
     @include ov {
       width: 390px;
     }
-    &_title {}
     &_view {
       margin-top: v(28);
       @include pc {
         margin-top: vp(48);
-        display: flex;
-        justify-content: flex-end;
       }
       @include ov {
         margin-top: 48px;
-      }
-      &_link {
-        width: v(102);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        @include pc {
-          width: vp(150);
-        }
-        @include ov {
-          width: 150px;
-        }
-        i {
-          width: v(48);
-          height: v(48);
-          line-height: 0;
-          background: #333;
-          border-radius: 100%;
-          display: flex;
-          align-content: center;
-          justify-content: center;
-          @include pc {
-            width: vp(88);
-            height: vp(88);
-          }
-          @include ov {
-            width: 88px;
-            height: 88px;
-          }
-          svg {
-            width: v(14);
-            height: auto;
-            @include pc {
-              width: vp(24);
-            }
-            @include ov {
-              width: 24px;
-            }
-            path {
-              fill: #fff;
-            }
-          }
-        }
-        p {
-          @include fv(18, 27);
-          font-family: $FONT-MYRIAD;
-          font-weight: 700;
-          @include pc {
-            @include fvp(18, 27);
-          }
-          @include ov {
-            @include fr(18, 27);
-          }
-        }
       }
     }
   }
@@ -590,11 +541,14 @@
         }
         span {
           margin-right: v(10);
+          @include fv(30, 30);
           @include pc {
             margin-right: vp(10);
+            @include fvp(38, 38);
           }
           @include ov {
             margin-right: 10px;
+            @include fr(38, 38);
           }
         }
       }

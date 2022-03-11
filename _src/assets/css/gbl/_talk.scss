@@ -1,32 +1,82 @@
 @charset "UTF-8";
 
 .gbl-talk {
-  padding-top: v(50);
+  padding-top: v(55);
   text-align: center;
   @include pc {
-    padding-top: vp(148);
+    padding-top: vp(138);
   }
   @include ov {
-    padding-top: 148px;
+    padding-top: 138px;
   }
   .pg-top_heading_inner {
     justify-content: center;
   }
-  &_body {
-    margin-top: v(24);
-    @include pc {
-      margin-top: vp(40);
-    }
-    @include ov {
-      margin-top: 40px;
-    }
-    p {
-      @include fv(15, 27, 4);
+  &_heading {
+    &_title {
+      display: inline-block;
+      font-family: $FONT-MYRIAD;
+      @include fv(48, 48);
+      position: relative;
       @include pc {
-        @include fvp(16, 28, 4);
+        @include fvp(90, 90);
       }
       @include ov {
-        @include fr(16, 28, 4);
+        @include fr(90, 90);
+      }
+      * {
+        @include fv(48, 48);
+        @include pc {
+          @include fvp(90, 90);
+        }
+        @include ov {
+          @include fr(90, 90);
+        }
+      }
+      b {
+        margin-right: v(15);
+        font-weight: bold;
+        @include pc {
+          margin-right: vp(15);
+        }
+        @include ov {
+          margin-right: 15px;
+        }
+      }
+      &::after {
+        content: '';
+        width: 100%;
+        height: v(3);
+        position: absolute;
+        left: 0px;
+        bottom: v(3);
+        background: #333;
+        @include pc {
+          height: vp(3);
+          bottom: vp(10);
+        }
+        @include ov {
+          height: 3px;
+          bottom: 10px;
+        }
+      }
+    }
+  }
+  &_body {
+    margin-top: v(26);
+    @include pc {
+      margin-top: vp(26);
+    }
+    @include ov {
+      margin-top: 26px;
+    }
+    p {
+      @include fv(15, 27, 80);
+      @include pc {
+        @include fvp(16, 28, 120);
+      }
+      @include ov {
+        @include fr(16, 28, 120);
       }
     }
   }
